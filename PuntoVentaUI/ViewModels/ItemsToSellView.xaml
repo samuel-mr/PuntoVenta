@@ -87,6 +87,28 @@
       VerticalAlignment="Top"
       Text="IGV 18%"
       TextWrapping="Wrap" />
+    <TextBlock
+      Margin="367,271,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      FontSize="22"
+      Text="{Binding Total, Mode=OneWay, FallbackValue=1323, TargetNullValue=22}" />
+    <TextBlock
+      Margin="117,236,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Text="{Binding SubTotal, Mode=OneWay}" />
+    <TextBlock
+      Margin="117,265.96,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Text="{Binding IGV, Mode=OneWay}" />
+    <TextBlock
+      Margin="117,295.666,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Foreground="Red"
+      Text="{Binding Discount, Mode=OneWay}" />
   </Grid>
 
 </UserControl>
