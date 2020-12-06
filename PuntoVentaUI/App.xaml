@@ -10,7 +10,7 @@
         <ResourceDictionary Source="/Telerik.Windows.Themes.Fluent;component/Themes/System.Windows.xaml" />
         <ResourceDictionary Source="/Telerik.Windows.Themes.Fluent;component/Themes/Telerik.Windows.Controls.xaml" />
       </ResourceDictionary.MergedDictionaries>
-      <SolidColorBrush x:Key="Text-Level2-Foreground" Color="#FF6C6C6C" />
+      <SolidColorBrush x:Key="Text-Level2-Foreground" Color="#FF4D4D4D" />
     </ResourceDictionary>
   </Application.Resources>
 </Application>

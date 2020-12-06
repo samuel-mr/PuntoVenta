@@ -49,6 +49,10 @@ namespace PuntoVentaUI.ViewModels
       }
     }
 
+    public decimal Discount => Items.Sum(x => x.Discount);
+    public decimal SubTotal => Items.Sum(x => x.Price);
+    public decimal IGV => SubTotal *0.18m;
+    public decimal Total => SubTotal + IGV - Discount;
   }
 
   public class ItemProductModel

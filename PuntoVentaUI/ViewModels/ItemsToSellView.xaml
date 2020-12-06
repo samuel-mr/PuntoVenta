@@ -6,8 +6,9 @@
   xmlns:local="clr-namespace:PuntoVentaUI.ViewModels"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   d:DataContext="{d:DesignInstance {x:Type local:ItemsToSellViewModel}}"
-  d:DesignHeight="206.903"
-  d:DesignWidth="343.661"
+  d:DesignHeight="318.903"
+  d:DesignWidth="561.661"
+  Background="White"
   mc:Ignorable="d">
   <UserControl.Resources>
     <local:ItemsToSellViewModel x:Key="ItemsToSellViewModelDataSource" d:IsDataSource="True" />
@@ -28,8 +29,11 @@
           Width="56"
           Margin="0"
           HorizontalAlignment="Left"
-          Text="{Binding Price}" />
-        <TextBlock Text="{Binding Name}" />
+          Text="{Binding Price, StringFormat=S/.\{0\}}" />
+        <TextBlock
+          FontSize="14"
+          FontWeight="Bold"
+          Text="{Binding Name}" />
         <TextBlock
           Grid.RowSpan="1"
           Grid.Column="1"
@@ -61,15 +65,28 @@
           Grid.Row="1"
           Grid.Column="0"
           Margin="61,0,0,0"
-          Text="{Binding Discount}" />
+          Text="{Binding Discount, StringFormat=\{0:P\}}" />
       </Grid>
     </DataTemplate>
   </UserControl.Resources>
   <Grid>
-    <ListBox
-      Margin="10,5.39,3.111,5.389"
+
+    <ItemsControl
+      Margin="0,0,0,103"
       ItemTemplate="{DynamicResource ItemProductModelTemplate}"
       ItemsSource="{Binding Items}" />
+    <TextBlock
+      Margin="28,242,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Text="SubTotal"
+      TextWrapping="Wrap" />
+    <TextBlock
+      Margin="29,271,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Text="IGV 18%"
+      TextWrapping="Wrap" />
   </Grid>
 
 </UserControl>
