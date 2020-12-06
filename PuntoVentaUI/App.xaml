@@ -11,6 +11,10 @@
         <ResourceDictionary Source="/Telerik.Windows.Themes.Fluent;component/Themes/Telerik.Windows.Controls.xaml" />
       </ResourceDictionary.MergedDictionaries>
       <SolidColorBrush x:Key="Text-Level2-Foreground" Color="#FF4D4D4D" />
-    </ResourceDictionary>
+            <SolidColorBrush x:Key="Title-Leve1-Foreground" Color="#FFD6D6D6"/>
+            <SolidColorBrush x:Key="NoteTitle-Level1-Foreground" Color="#FF878787"/>
+            <SolidColorBrush x:Key="Text-Level1-Foreground" Color="#FF2E2E2E"/>
+            <SolidColorBrush x:Key="Principal-Foreground" Color="#FF12B020"/>
+        </ResourceDictionary>
   </Application.Resources>
 </Application>

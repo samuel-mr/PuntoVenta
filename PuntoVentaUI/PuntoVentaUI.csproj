@@ -84,10 +84,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\HeaderView.xaml.cs">
+      <DependentUpon>HeaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\HeaderViewModel.cs" />
     <Compile Include="ViewModels\ItemsToSellView.xaml.cs">
       <DependentUpon>ItemsToSellView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\ItemsToSellViewModel.cs" />
+    <Compile Include="ViewModels\SellerView.xaml.cs">
+      <DependentUpon>SellerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\SellerViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,7 +107,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ViewModels\HeaderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ViewModels\ItemsToSellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewModels\SellerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SampleData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\fotousuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

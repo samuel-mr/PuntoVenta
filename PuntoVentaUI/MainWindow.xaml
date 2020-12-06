@@ -8,9 +8,10 @@
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
   Title="MainWindow"
-  Width="1118.5"
+  Width="1174.5"
   Height="593.5"
   Background="#FFC5CFD8"
+  MouseLeftButtonDown="Window_MouseLeftButtonDown"
   ResizeMode="NoResize"
   WindowStyle="None">
   <Window.DataContext>
@@ -18,7 +19,7 @@
   </Window.DataContext>
   <Grid>
     <TextBlock
-      Margin="0,23,186,0"
+      Margin="0,104,188,0"
       HorizontalAlignment="Right"
       VerticalAlignment="Top"
       FontSize="22"
@@ -26,7 +27,7 @@
       Text="Ticket n°"
       TextWrapping="Wrap" />
     <TextBlock
-      Margin="0,23,9,0"
+      Margin="0,104,9,0"
       HorizontalAlignment="Right"
       VerticalAlignment="Top"
       FontSize="22"
@@ -311,12 +312,19 @@
     </telerik:RadButton>
     <Border
       Width="494"
-      Margin="343,10,0,10"
+      Margin="390,90,0,10"
       HorizontalAlignment="Left"
       Background="#FFF3F3F3"
       BorderThickness="1"
       CornerRadius="5">
       <ViewModels:ItemsToSellView Margin="10" DataContext="{Binding ItemsToSellViewModel}" />
     </Border>
+    <ViewModels:HeaderView Height="80" VerticalAlignment="Top" />
+    <ViewModels:SellerView
+      Width="202"
+      Height="269"
+      Margin="10,315,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top" />
   </Grid>
 </Window>

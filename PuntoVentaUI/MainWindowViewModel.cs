@@ -16,6 +16,7 @@ namespace PuntoVentaUI
     {
       Title = "RETAIL NAME / LOGO";
       ItemsToSellViewModel = new ItemsToSellViewModel();
+      HeaderViewModel = new HeaderViewModel();
     }
 
     private string _Title;
@@ -30,6 +31,21 @@ namespace PuntoVentaUI
         if (_Title == value) return;
         _Title = value;
         RaisePropertyChanged(nameof(Title));
+      }
+    }
+
+    private HeaderViewModel _HeaderViewModel;
+    public HeaderViewModel HeaderViewModel
+    {
+      get
+      {
+        return _HeaderViewModel;
+      }
+      set
+      {
+        if (_HeaderViewModel == value) return;
+        _HeaderViewModel = value;
+        RaisePropertyChanged(nameof(HeaderViewModel));
       }
     }
 

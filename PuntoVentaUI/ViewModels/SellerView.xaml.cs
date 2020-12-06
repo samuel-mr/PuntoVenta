@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PuntoVentaUI
+namespace PuntoVentaUI.ViewModels
 {
   /// <summary>
-  /// Interaction logic for MainWindow.xaml
+  /// Lógica de interacción para SellerView.xaml
   /// </summary>
-  public partial class MainWindow : Window
+  public partial class SellerView : UserControl
   {
-    public MainWindow()
+    public SellerView()
     {
       InitializeComponent();
-    }
-
-    private void RadButton_Click_1(object sender, RoutedEventArgs e)
-    {
-      this.Close();
-    }
-
-    private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-    {
-      DragMove();
     }
   }
 }
