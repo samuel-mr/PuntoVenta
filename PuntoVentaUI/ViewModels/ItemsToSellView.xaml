@@ -2,6 +2,7 @@
   x:Class="PuntoVentaUI.ViewModels.ItemsToSellView"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:local="clr-namespace:PuntoVentaUI.ViewModels"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -9,120 +10,154 @@
   d:DesignHeight="318.903"
   d:DesignWidth="561.661"
   mc:Ignorable="d">
-  <UserControl.Resources>
-    <local:ItemsToSellViewModel x:Key="ItemsToSellViewModelDataSource" d:IsDataSource="True" />
-    <DataTemplate x:Key="ItemProductModelTemplate">
-      <Grid Height="48">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="24" />
-          <RowDefinition Height="24" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition />
-          <ColumnDefinition Width="90" />
-          <ColumnDefinition Width="80" />
-        </Grid.ColumnDefinitions>
-        <TextBlock
+    <UserControl.Resources>
+        <local:ItemsToSellViewModel x:Key="ItemsToSellViewModelDataSource" d:IsDataSource="True" />
+        <DataTemplate x:Key="ItemProductModelTemplate">
+            <Border CornerRadius="5" Background="#73D057" Margin="1">
+                <Grid Height="48" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="24" />
+                        <RowDefinition Height="24" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="90" />
+                        <ColumnDefinition Width="80" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
           Grid.Row="1"
           Grid.Column="0"
           Width="56"
           Margin="0"
           HorizontalAlignment="Left"
           Text="{Binding Price, StringFormat=S/.\{0\}}" />
-        <TextBlock
+                    <TextBlock
           FontSize="14"
           FontWeight="Bold"
           Text="{Binding Name}" />
-        <TextBlock
+                    <TextBlock
           Grid.RowSpan="1"
           Grid.Column="1"
           Foreground="{DynamicResource Text-Level2-Foreground}"
           Text="{Binding Description}" />
-        <TextBlock
+                    <TextBlock
           Grid.Row="1"
           Grid.Column="1"
           Foreground="{DynamicResource Text-Level2-Foreground}"
           Text="{Binding Code}" />
-        <Grid Grid.RowSpan="2" Grid.Column="2">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
-          <Button
+                    <Grid Grid.RowSpan="2" Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <telerik:RadButton
             Width="Auto"
             Height="Auto"
-            Margin="0,0,5,10"
-            Content="+" />
-          <Button
+            >
+                            <Path Data="M14.399994,8.0999985L17.5,8.0999985 17.5,14.5 23.899994,14.5 23.899994,17.599998 17.5,17.599998 17.5,24 14.399994,24 14.399994,17.599998 8,17.599998 8,14.5 14.399994,14.5z M16,2.5C8.5,2.5 2.5,8.5 2.5,16 2.5,23.5 8.6000061,29.5 16,29.5 23.5,29.5 29.5,23.400002 29.5,16 29.5,8.5 23.5,2.5 16,2.5z M16,0C24.799988,0 32,7.1999969 32,16 32,24.800003 24.799988,32 16,32 7.1999817,32 0,24.800003 0,16 0,7.1999969 7.1999817,0 16,0z" Stretch="Uniform" Fill="#FFFFFFFF" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <TransformGroup.Children>
+                                            <RotateTransform Angle="0" />
+                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                        </TransformGroup.Children>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                        </telerik:RadButton>
+                        <telerik:RadButton
             Grid.Column="1"
-            Width="Auto"
-            Height="Auto"
-            Margin="0,0,10,10"
-            Content="X" />
-        </Grid>
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="61,0,0,0"
-          Text="{Binding Discount, StringFormat=\{0:P\}}" />
-      </Grid>
-    </DataTemplate>
-  </UserControl.Resources>
-  <Grid>
+            >
+                            <Path Data="M12.300049,9.3000031L16,13 19.700012,9.3000031 22.700012,12.300003 19,16 22.700012,19.699997 19.700012,22.699997 16,19 12.300049,22.699997 9.3000488,19.699997 13,16 9.3000488,12.300003z M16,3.5999985C9.2000122,3.5999985 3.6000366,9.1999969 3.6000366,16 3.6000366,22.800003 9.2000122,28.400002 16,28.400002 22.800049,28.400002 28.400024,22.900002 28.400024,16 28.400024,9.0999985 22.800049,3.5999985 16,3.5999985z M16,0C24.800049,0 32,7.1999969 32,16 32,24.800003 24.800049,32 16,32 7.2000122,32 0,24.800003 0,16 0,7.1999969 7.2000122,0 16,0z" Stretch="Uniform" Fill="#FF5663" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <TransformGroup.Children>
+                                            <RotateTransform Angle="0" />
+                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                        </TransformGroup.Children>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                        </telerik:RadButton>
+                    </Grid>
+                    <StackPanel Grid.Row="1"
+          Grid.Column="0" Orientation="Horizontal"
+          Margin="71,0,0,0">
 
-    <ItemsControl
+                        <TextBlock Foreground="#D7F030"
+          Text="{Binding Discount, StringFormat=\{0:P\}}" />
+                        <Path Data="M9.4614787,7.2521966C8.897512,7.2521966 8.3335462,7.4671911 7.9035716,7.8961795 7.0456223,8.7541569 7.0456223,10.15112 7.9035716,11.010097 8.7355218,11.842075 10.186436,11.842075 11.018386,11.010097 11.876336,10.15112 11.876336,8.7541569 11.018386,7.8961795 10.588412,7.4671911 10.024445,7.2521966 9.4614787,7.2521966z M9.4617286,5.2529996C10.537916,5.2529991 11.613851,5.6627386 12.432303,6.4822172 14.069206,8.1201742 14.069206,10.786103 12.432303,12.424061 11.639349,13.217039 10.583413,13.655028 9.4614787,13.655028 8.3395457,13.655028 7.283608,13.217039 6.4896555,12.424061 4.8527527,10.786103 4.8527527,8.1201742 6.4896555,6.4822172 7.3091063,5.6627386 8.3855424,5.2529991 9.4617286,5.2529996z M12.752985,2.0839849L3.0529771,3.0440679 2.0839834,12.737062 18.512992,29.166996 29.173999,18.505007z M13.497004,0L32.002,18.505007 18.512992,31.994999 0,13.481081 1.2249749,1.2160647z" Stretch="Uniform" Fill="#D7F030" Width="26" Height="26" Margin="10,0,0,0" RenderTransformOrigin="0.5,0.5">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <TransformGroup.Children>
+                                        <RotateTransform Angle="0" />
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                    </TransformGroup.Children>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+
+        <ItemsControl
       Margin="0,0,0,103"
       ItemTemplate="{DynamicResource ItemProductModelTemplate}"
       ItemsSource="{Binding Items}" />
-    <TextBlock
+
+    <Border CornerRadius="2" BorderBrush="Aqua" Margin="0,0,-0.4,88.2" Background="#FFC5CFD8" Height="5" VerticalAlignment="Bottom"/>
+        <TextBlock
       Margin="40,0,0,67"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       FontWeight="Bold"
       Text="SubTotal"
       TextWrapping="Wrap" />
-    <TextBlock
+        <TextBlock
       Margin="41,0,0,37"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       FontWeight="Bold"
       Text="IGV 18%"
       TextWrapping="Wrap" />
-    <TextBlock
+        <TextBlock
       Margin="322,0,0,10"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       FontSize="36"
       Text="{Binding Total, Mode=OneWay, FallbackValue=1323, TargetNullValue=22}" />
-    <TextBlock
+        <TextBlock
       Margin="117,0,0,67"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       Text="{Binding SubTotal, Mode=OneWay}" />
-    <TextBlock
+        <TextBlock
       Margin="117,0,0,37"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       Text="{Binding IGV, Mode=OneWay}" />
-    <TextBlock
+        <TextBlock
       Margin="117,0,0,10"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       Foreground="Red"
       Text="{Binding Discount, Mode=OneWay}" />
-    <TextBlock
+        <TextBlock
       Margin="29,0,0,10"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       Foreground="Red"
       Text="Descuento"
-      TextWrapping="Wrap" />
-    <TextBlock
+      TextWrapping="Wrap" FontWeight="Bold" />
+        <TextBlock
       Margin="316,0,0,67"
       HorizontalAlignment="Left"
       VerticalAlignment="Bottom"
       Text="Total"
       TextWrapping="Wrap" />
-  </Grid>
+    </Grid>
 
 </UserControl>
