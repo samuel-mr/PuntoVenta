@@ -8,7 +8,6 @@
   d:DataContext="{d:DesignInstance {x:Type local:ItemsToSellViewModel}}"
   d:DesignHeight="318.903"
   d:DesignWidth="561.661"
-  Background="White"
   mc:Ignorable="d">
   <UserControl.Resources>
     <local:ItemsToSellViewModel x:Key="ItemsToSellViewModelDataSource" d:IsDataSource="True" />
@@ -76,39 +75,54 @@
       ItemTemplate="{DynamicResource ItemProductModelTemplate}"
       ItemsSource="{Binding Items}" />
     <TextBlock
-      Margin="28,242,0,0"
+      Margin="40,0,0,67"
       HorizontalAlignment="Left"
-      VerticalAlignment="Top"
+      VerticalAlignment="Bottom"
+      FontWeight="Bold"
       Text="SubTotal"
       TextWrapping="Wrap" />
     <TextBlock
-      Margin="29,271,0,0"
+      Margin="41,0,0,37"
       HorizontalAlignment="Left"
-      VerticalAlignment="Top"
+      VerticalAlignment="Bottom"
+      FontWeight="Bold"
       Text="IGV 18%"
       TextWrapping="Wrap" />
     <TextBlock
-      Margin="367,271,0,0"
+      Margin="322,0,0,10"
       HorizontalAlignment="Left"
-      VerticalAlignment="Top"
-      FontSize="22"
+      VerticalAlignment="Bottom"
+      FontSize="36"
       Text="{Binding Total, Mode=OneWay, FallbackValue=1323, TargetNullValue=22}" />
     <TextBlock
-      Margin="117,236,0,0"
+      Margin="117,0,0,67"
       HorizontalAlignment="Left"
-      VerticalAlignment="Top"
+      VerticalAlignment="Bottom"
       Text="{Binding SubTotal, Mode=OneWay}" />
     <TextBlock
-      Margin="117,265.96,0,0"
+      Margin="117,0,0,37"
       HorizontalAlignment="Left"
-      VerticalAlignment="Top"
+      VerticalAlignment="Bottom"
       Text="{Binding IGV, Mode=OneWay}" />
     <TextBlock
-      Margin="117,295.666,0,0"
+      Margin="117,0,0,10"
       HorizontalAlignment="Left"
-      VerticalAlignment="Top"
+      VerticalAlignment="Bottom"
       Foreground="Red"
       Text="{Binding Discount, Mode=OneWay}" />
+    <TextBlock
+      Margin="29,0,0,10"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Bottom"
+      Foreground="Red"
+      Text="Descuento"
+      TextWrapping="Wrap" />
+    <TextBlock
+      Margin="316,0,0,67"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Bottom"
+      Text="Total"
+      TextWrapping="Wrap" />
   </Grid>
 
 </UserControl>

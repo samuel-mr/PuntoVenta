@@ -24,7 +24,7 @@ namespace PuntoVentaUI
       InitializeComponent();
     }
 
-    private void RadButton_Click(object sender, RoutedEventArgs e)
+    private void RadButton_Click_1(object sender, RoutedEventArgs e)
     {
       this.Close();
     }
