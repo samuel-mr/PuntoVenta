@@ -87,7 +87,10 @@
           </Path.RenderTransform>
         </Path>
       </telerik:RadButton>
-      <telerik:RadButton Background="#FFEA0000" Click="RadButton_Click_1">
+      <telerik:RadButton
+        Background="#FFEA0000"
+        Click="RadButton_Click_1"
+        ToolTip="Cerrar">
         <Path
           Width="26"
           Height="26"
@@ -311,8 +314,8 @@
       </StackPanel>
     </telerik:RadButton>
     <Border
-      Width="494"
-      Margin="390,90,0,10"
+      Width="667"
+      Margin="217,90,0,10"
       HorizontalAlignment="Left"
       Background="#FFF3F3F3"
       BorderThickness="1"

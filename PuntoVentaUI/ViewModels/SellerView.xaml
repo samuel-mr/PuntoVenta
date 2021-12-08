@@ -11,29 +11,29 @@
   mc:Ignorable="d">
   <Grid>
     <TextBlock
-      Margin="34,36,0,0"
+      Margin="24,36,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
       FontSize="16"
       Foreground="{DynamicResource Text-Level1-Foreground}"
-      Text="Beny Linus"
-      TextWrapping="Wrap" />
+      TextWrapping="Wrap"><Run Text="Mila " /><Run Language="es-pe" Text="K" /><Run Text="unis" /></TextBlock>
     <Image
       Width="154"
       Height="156"
       Margin="24,62,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
-      Source="/PuntoVentaUI;component/Imagenes/fotousuario.png" />
+      Source="/Imagenes/fotousuario1.png"
+      Stretch="UniformToFill" />
     <Button
       Width="89"
       Height="40"
       Margin="59,223,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
-      Content="Refresh" />
+      Content="Cambiar" />
     <TextBlock
-      Margin="34,10,0,0"
+      Margin="24,10,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
       FontSize="14"

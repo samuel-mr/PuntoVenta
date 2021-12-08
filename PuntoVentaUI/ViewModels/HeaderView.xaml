@@ -27,7 +27,7 @@
       VerticalAlignment="Top"
       FontSize="16"
       Foreground="{DynamicResource Title-Leve1-Foreground}"
-      Text="{Binding Nombre, FallbackValue=Juanita oiwasjfi oj32oia sjeroij}"
+      Text="{Binding Nombre, FallbackValue=Juanita Monterrey Rodriguez}"
       TextWrapping="Wrap" />
     <TextBlock
       Width="130"
@@ -37,8 +37,7 @@
       VerticalAlignment="Top"
       FontSize="16"
       Foreground="{DynamicResource Title-Leve1-Foreground}"
-      Text="{Binding Dni, FallbackValue=44003461}"
-      TextWrapping="Wrap" />
+      TextWrapping="Wrap"><Run Text="440346" /><Run Language="es-pe" Text="2" /></TextBlock>
     <TextBlock
       Margin="124,43,0,0"
       HorizontalAlignment="Left"
