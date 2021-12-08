@@ -5,7 +5,6 @@
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:local="clr-namespace:PuntoVentaUI.ViewModels"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
   d:DataContext="{d:DesignInstance {x:Type local:ItemsToSellViewModel}}"
   d:DesignHeight="318.903"
   d:DesignWidth="561.661"
@@ -53,7 +52,11 @@
               <ColumnDefinition Width="*" />
               <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <telerik:RadButton Width="Auto" Height="Auto">
+            <Button
+              Width="Auto"
+              Height="Auto"
+              Background="#19000000"
+              BorderBrush="Transparent">
               <Path
                 Width="26"
                 Height="26"
@@ -71,8 +74,11 @@
                   </TransformGroup>
                 </Path.RenderTransform>
               </Path>
-            </telerik:RadButton>
-            <telerik:RadButton Grid.Column="1">
+            </Button>
+            <Button
+              Grid.Column="1"
+              Background="#19000000"
+              BorderBrush="Transparent">
               <Path
                 Width="26"
                 Height="26"
@@ -90,7 +96,7 @@
                   </TransformGroup>
                 </Path.RenderTransform>
               </Path>
-            </telerik:RadButton>
+            </Button>
           </Grid>
           <StackPanel
             Grid.Row="1"
