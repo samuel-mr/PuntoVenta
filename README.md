@@ -1,2 +1,3 @@
 # PuntoVenta
-Proyecto de punto de venta
+Muestra un concepto de diseño de punto de venta.
+
